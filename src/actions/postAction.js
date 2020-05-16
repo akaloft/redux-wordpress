@@ -7,11 +7,11 @@ export const GET_POST_FULFILLED = "GET_POST_FULFILLED"
 export const GET_POST_REJECTED = "GET_POST_REJECTED"
 
 
-export function getPosts() {
+export function getPosts(params) {
     return dispatch => {
         dispatch({
             type: 'GET_POST',
-            payload: axios.get(`${API}/posts`)
+            payload: axios.get(`${API}/posts`, {params})
                 .then(result => result)
         })
     }
