@@ -17,7 +17,7 @@ function List({ data, archive }) {
                                     {item.title.rendered}
                                 </Link> : item.title.rendered}
                         </h2>
-                        {renderHTML(item.content.rendered)}
+                        {renderHTML(item.excerpt.rendered)}
                     </div>
                 </article>
             )}
