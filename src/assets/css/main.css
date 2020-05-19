@@ -7,6 +7,7 @@ header {
 .site-title {
   letter-spacing: -4px; }
 
+/* Color */
 body {
   font-family: 'Spartan'; }
 
@@ -34,6 +35,12 @@ body {
   .post .post-title {
     font-size: 21px;
     font-weight: 500; }
+    .post .post-title a {
+      color: #142850; }
+      .post .post-title a:hover {
+        text-decoration: none;
+        transition: .3s ease-in;
+        color: #27496d; }
   .post .post-content {
     padding: 15px; }
   .post p {

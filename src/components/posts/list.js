@@ -2,7 +2,7 @@ import React from 'react'
 import renderHTML from 'react-render-html'
 import { Link } from 'react-router-dom'
 
-function List({ data, single }) {
+function List({ data, archive }) {
     return (
         <React.Fragment>
             {data.map(item =>
@@ -12,15 +12,12 @@ function List({ data, single }) {
                     </div>
                     <div className="post-content">
                         <h2 className="post-title">
-                            {single ?
+                            {!archive ?
                                 <Link to={item.slug}>
                                     {item.title.rendered}
                                 </Link> : item.title.rendered}
                         </h2>
-                        {single ?
-                            renderHTML(item.content.rendered)
-                            : renderHTML(item.excerpt.rendered)
-                        }
+                        {renderHTML(item.content.rendered)}
                     </div>
                 </article>
             )}
