@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import Header from './header'
 import Sidebar from './sidebar'
+import Footer from './footer'
+import { Container } from 'reactstrap'
 
 class MainLayout extends Component {
-  render () {
+  render() {
     return (
       <React.Fragment>
         <Header />
         <Sidebar />
-        {this.props.children}
+        <Container>
+          {this.props.children}
+        </Container>
+        <Footer />
       </React.Fragment>
     )
   }

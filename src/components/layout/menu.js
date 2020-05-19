@@ -21,7 +21,7 @@ function NavbarMenu() {
 
 
     return (
-        <Navbar expand="md">
+        <Navbar light expand="md">
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
                 {!loading ? <Nav>
@@ -30,7 +30,7 @@ function NavbarMenu() {
                             <NavItem key={item.ID}>
                                 <NavLink href="#">{item.title}</NavLink>
                             </NavItem>
-                            : <UncontrolledButtonDropdown nav inNavbar>
+                            : <UncontrolledButtonDropdown nav inNavbar key={item.ID}>
                                 <DropdownToggle caret>{item.title}</DropdownToggle>
                                 <DropdownMenu right>
                                     {item.child_items.map(sub =>

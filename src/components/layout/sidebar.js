@@ -2,9 +2,9 @@ import React from 'react'
 
 function Sidebar() {
     return (
-        <React.Fragment>
+        <div className="sidebar-left">
             Sidebar
-        </React.Fragment>
+        </div>
     )
 }
 

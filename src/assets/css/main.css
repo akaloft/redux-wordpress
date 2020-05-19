@@ -9,3 +9,34 @@ header {
 
 body {
   font-family: 'Spartan'; }
+
+.sidebar-left {
+  position: absolute;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  transition: .3s ease-in all; }
+  .sidebar-left.active {
+    left: 0;
+    padding: 15px; }
+
+.post {
+  margin-bottom: 30px; }
+  .post.post-image-card {
+    border-radius: 5px; }
+  .post:not(.post-image-card) {
+    background: #f9f9f9;
+    border-radius: 5px; }
+  .post .post-image img {
+    border-radius: 5px;
+    width: 100%;
+    height: auto; }
+  .post .post-title {
+    font-size: 21px;
+    font-weight: 500; }
+  .post .post-content {
+    padding: 15px; }
+  .post p {
+    font-size: 14px; }
+    .post p:last-child {
+      margin-bottom: 0; }

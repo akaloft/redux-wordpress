@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { API } from '../helper'
+import { API, WP } from '../helper'
 
 
 export const GET_POST_PENDING = "GET_POST_PENDING"
@@ -11,7 +11,7 @@ export function getPosts(params) {
     return dispatch => {
         dispatch({
             type: 'GET_POST',
-            payload: axios.get(`${API}/posts`, {params})
+            payload: axios.get(`${API}/${WP}/posts`, { params })
                 .then(result => result)
         })
     }
